@@ -1,0 +1,208 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: 1000ms;
+}
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: 1000ms;
+}
+.modal {
+  position: absolute;
+  background-color: var(--third-color);
+  width: 528px;
+  height: 581px;
+  left: 50%;
+  top: 50%;
+  padding: 40px;
+  transform: translate(-50%, -50%) scale(1);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.close-button {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: var(--third-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  top: 8px;
+  right: 8px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-button .modal {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  letter-spacing: 0.03em;
+  color: var(--first-color);
+
+  font-size: 20px;
+  line-height: 23px;
+  margin-bottom: 30px;
+}
+
+.close-button:hover,
+.close-button:focus {
+  fill: var(--button-color);
+}
+
+.modal-form__title {
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--first-color);
+  margin-bottom: 12px;
+}
+
+.modal-form__contact-form-input {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  padding-left: 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+
+  border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form__formForComments-area {
+  width: 100%;
+  height: 120px;
+  resize: none;
+  padding: 12px 16px;
+  margin-top: 4px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+
+  border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form__formForComments-area::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+  text-transform: uppercase;
+}
+
+.modal-form__modal-input-icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form__input-wrapper {
+  position: relative;
+  display: flex;
+  margin-top: 4px;
+  margin-bottom: 10px;
+}
+
+.modal-form__label {
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 400;
+  color: var(--secondary-txt);
+
+  letter-spacing: 0.01em;
+}
+.modal-form__contact-form-input:hover,
+.modal-form__contact-form-input:focus,
+.modal-form__formForComments-area:focus,
+.modal-form__formForComments-area:hover {
+  outline: none;
+  border-color: var(--button-color);
+  fill: var(--button-color);
+}
+.modal-form__label :hover + .modal-form__modal-input-icon {
+  fill: var(--button-color);
+}
+.modal-form__label :focus + .modal-form__modal-input-icon {
+  fill: var(--button-color);
+}
+
+.modal_check-button {
+  width: 200px;
+  height: 50px;
+  margin: 0%;
+}
+
+.modal-form__check-desk {
+  display: flex;
+  align-items: center;
+  color: var(--secondary-txt);
+  font-weight: 400;
+  line-height: 24px;
+
+  letter-spacing: 0.03em;
+  margin-bottom: 30px;
+}
+
+.modal-form__check-desk > a {
+  color: var(--button-color);
+}
+.modal-form__check-desk::before {
+  content: '';
+
+  width: 16px;
+  height: 15px;
+  border: 1px solid #000000;
+  border-radius: 2px;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-left: 12px;
+  margin-right: 9px;
+  transition: 250ms;
+}
+
+.costum-checkbox:checked + .modal-form__check-desk::before {
+  background-color: var(--button-color);
+  background-image: url('../images/inline_svg/check_icon.svg');
+  background-size: contain;
+  border-color: var(--button-color);
+  background-origin: border-box;
+}
+
+.modal-form__send-form-button {
+  width: 200px;
+  height: 50px;
+  background-color: var(--button-color);
+  color: var(--third-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 30px;
+  border: none;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form__button-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modal-form__send-form-button:hover,
+.modal-form__send-form-button:focus,
+.newslatter__button:focus,
+.newslatter__button:hover {
+  background-color: var(--btn-color);
+}

@@ -1,0 +1,44 @@
+.work-section {
+  padding-bottom: var(--pd-bt-tp);
+}
+.work-section__list {
+  display: flex;
+  margin-left: -30px;
+}
+
+.work-section__item {
+  margin-left: var(--mr-left);
+  position: relative;
+}
+
+.work-section__about {
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  line-height: 1.14;
+  bottom: 0;
+  left: 0;
+  background: rgba(47, 48, 58, 0.8);
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--third-color);
+}
+
+.team-section__title,
+.work-section__title,
+.clients-section__title {
+  font-size: 36px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  margin-bottom: var(--pd-ttl);
+}
+.work-section,
+.team-section {
+  display: flex;
+  text-align: center;
+}
